@@ -91,13 +91,13 @@ function Header() {
                 >
                     <div className="px-8">
                         <div className="flex flex-col gap-8 font-bold tracking-wider">
-                            <Link to="/" onClick={() => toggleMenu = false} className="border-l-4 border-gray-600">
+                            <Link to="/" onClick={() => setToggleMenu = false} className="border-l-4 border-gray-600">
                                 Home
                             </Link>
-                            <Link to="/login" onClick={() => toggleMenu = false} className="border-l-4 border-gray-600">
+                            <Link to="/login" onClick={() => setToggleMenu = false} className="border-l-4 border-gray-600">
                                 Login
                             </Link>
-                            <Link to="/signup" onClick={() => toggleMenu = false} className="border-l-4 border-gray-600">
+                            <Link to="/signup" className="border-l-4 border-gray-600">
                                 Signup
                             </Link>
                         </div>

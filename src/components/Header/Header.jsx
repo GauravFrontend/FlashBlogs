@@ -21,6 +21,7 @@ function Header() {
     const handleLogout = () => {
         authService.logout().then(() => {
             dispatch(logout())
+            setToggleMenu(!toggleMenu)
             navigate("/")
         })
     }
@@ -94,12 +95,20 @@ function Header() {
                             <Link to="/"  onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
                                 Home
                             </Link>
-                            <Link to="/login" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
+                            {isUserActive?(<>
+                                <Link onClick={handleLogout} className="border-l-4 border-gray-600">
+                                Logout
+                            </Link>
+                            </>):(
+                                <>
+                                <Link to="/login" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
                                 Login
                             </Link>
                             <Link to="/signup" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
                                 Signup
                             </Link>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

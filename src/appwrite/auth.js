@@ -28,6 +28,7 @@ export class AuthService {
     async login({ email, password }) {
         try {
             return await this.account.createEmailSession(email, password);
+            console.log("Login authService called")
         } catch (error) {
             throw error
         }
@@ -45,6 +46,7 @@ export class AuthService {
     async logout() {
         try {
             await this.account.deleteSessions();
+            console.log("logout authService called")
         } catch (error) {
             console.log("error in logut")
         }

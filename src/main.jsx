@@ -7,6 +7,7 @@ import Login from './pages/Login.jsx'
 import store from './store/store.js'
 import { Provider } from 'react-redux'
 import Home from './pages/Home.jsx'
+import Signup from './pages/Signup.jsx'
 
 
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />
+      },
+      {
+        path: "/signup",
+        element: <Signup />
       }
     ]
   }

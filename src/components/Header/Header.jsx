@@ -48,7 +48,7 @@ function Header() {
                                 <Link href="#" className="">
                                     Home
                                 </Link>
-                                <Link href="#">All Posts</Link>
+                                <Link to="/all-posts">All Posts</Link>
                                 <Link href="#">Add Post</Link>
                             </div>
                         </div>

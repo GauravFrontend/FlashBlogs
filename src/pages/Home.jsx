@@ -36,9 +36,11 @@ const Home = () => {
     </>
   ) : (
     <>
+      
+      <div className='h-96 flex flex-col justify-center align-middle' >
       <h1 className='text-3xl' >Welcome to Home</h1>
       <h1 className='text-3xl' >Please Login</h1>
-
+        </div>
     </>
   )
 }

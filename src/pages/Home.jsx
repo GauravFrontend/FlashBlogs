@@ -17,7 +17,7 @@ const Home = () => {
 
   return userData ? (
     <>
-      {posts ? (
+      {!posts ? (
         <div >
 				<div className=" flex flex-wrap justify-start align-middle gap-5" >
 
@@ -28,7 +28,11 @@ const Home = () => {
 					})}
 				</div>
 			</div>
-      ) : (<h1>loading</h1>)}
+      ) : (
+        <div className='h-96 flex flex-col justify-center align-middle' >
+          <h1 className='text-2xl'>loading</h1>
+        </div>
+      )}
     </>
   ) : (
     <>

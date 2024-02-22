@@ -48,17 +48,17 @@ function Header() {
                                 <Link href="#" className="">
                                     Home
                                 </Link>
-                                <Link to="/all-posts">All Posts</Link>
-                                <Link href="#">Add Post</Link>
+                                {isUserActive ? (
+                                    <div className="hidden lg:flex gap-8 " >
+                                        <Link to="/all-posts">All Posts</Link>
+                                        <Link to="/add-post">Add Post</Link>
+                                    </div>
+                                ) : null}
                             </div>
                         </div>
                         {/* secondary */}
                         <div className="flex gap-6">
                             <div className="hidden xs:flex items-center gap-10">
-                                <div className="hidden lg:flex items-center gap-2">
-                                    <MoonIcon className="h-6 w-6" />
-                                    <SunIcon className="h-6 w-6" />
-                                </div>
                                 <div>
                                     {isUserActive ? (
                                         <Link onClick={handleLogout} className="rounded-full border-solid border-2 border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-gray-100">
@@ -92,21 +92,27 @@ function Header() {
                 >
                     <div className="px-8">
                         <div className="flex flex-col gap-8 font-bold tracking-wider">
-                            <Link to="/"  onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
+                            <Link to="/" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
                                 Home
                             </Link>
-                            {isUserActive?(<>
+                            {isUserActive ? (<>
+                                <Link onClick={() => setToggleMenu(!toggleMenu)} to="/all-posts" className="border-l-4 border-gray-600">
+                                    All Posts
+                                </Link>
+                                <Link onClick={() => setToggleMenu(!toggleMenu)} to="add-post" className="border-l-4 border-gray-600">
+                                    Add Post
+                                </Link>
                                 <Link onClick={handleLogout} className="border-l-4 border-gray-600">
-                                Logout
-                            </Link>
-                            </>):(
+                                    Logout
+                                </Link>
+                            </>) : (
                                 <>
-                                <Link to="/login" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
-                                Login
-                            </Link>
-                            <Link to="/signup" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
-                                Signup
-                            </Link>
+                                    <Link to="/login" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
+                                        Login
+                                    </Link>
+                                    <Link to="/signup" onClick={() => setToggleMenu(!toggleMenu)} className="border-l-4 border-gray-600">
+                                        Signup
+                                    </Link>
                                 </>
                             )}
                         </div>

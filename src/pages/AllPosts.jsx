@@ -38,7 +38,9 @@ const AllPosts = () => {
 					})}
 				</div>
 			</div>
-    ) : null;
+    ) : (
+        <h1>YOU DONT HAVE ANY POSTS</h1>
+    );
 }
 
 export default AllPosts

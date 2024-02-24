@@ -27,7 +27,7 @@ const AllPosts = () => {
         console.log(filtered)
     }
 
-    return filtered ? (
+    return filtered && filtered.length>0 ? (
         <div >
 				<div className=" flex flex-wrap justify-start align-middle gap-5" >
 
@@ -39,7 +39,12 @@ const AllPosts = () => {
 				</div>
 			</div>
     ) : (
-        <h1>YOU DONT HAVE ANY POSTS</h1>
+        <>
+      
+      <div className='h-96 flex flex-col justify-center align-middle' >
+      <h1 className='text-3xl' >"It seems like you haven't posted anything yet."</h1>
+        </div>
+    </>
     );
 }
 

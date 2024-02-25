@@ -9,7 +9,7 @@ const PostCard = ({ $id, title, featuredImage }) => {
                 <div className="max-w-sm  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
                     <div className="max-w-sm max-h-72 overflow-hidden">
-                        <img className="rounded-t-lg object-cover w-full h-full" src={service.getFilePreview(featuredImage)} alt="" />
+                        <img className="rounded-t-lg object-cover w-full h-full" src="https://appwrite.flashblogs.xyz/v1/storage/buckets/658aa9c8397e65918e17/files/65bd80c82316641d28c6/preview?project=658970bc8aaeea6b8af8" alt="" />
                     </div>
                    
 

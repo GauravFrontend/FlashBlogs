@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import service from '../appwrite/config'
 const PostCard = ({ $id, title, featuredImage }) => {
+
     return (
         <>
             <Link className='aspect-square object-contain '  to={`/post/${$id}`} >
@@ -10,7 +11,7 @@ const PostCard = ({ $id, title, featuredImage }) => {
                     <div className="max-w-sm max-h-72 overflow-hidden">
                         <img className="rounded-t-lg object-cover w-full h-full" src={service.getFilePreview(featuredImage)} alt="" />
                     </div>
-
+                   
 
                     <div className="p-5">
 

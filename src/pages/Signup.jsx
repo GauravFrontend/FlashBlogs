@@ -59,7 +59,7 @@ const Signup = () => {
                         />
                         <Input
                             type="text"
-                            label="Email: "
+                            label="Email: include @your.com"
                             {...register("email", {
                                 required: true,
                                 validate: {
@@ -70,7 +70,7 @@ const Signup = () => {
                         />
                         <Input
                             type="password"
-                            label="Password: "
+                            label="Password: must be at least 8 characters "
                             {...register("password", {
                                 required: true
                             })}
